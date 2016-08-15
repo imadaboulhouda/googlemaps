@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Api Plugin</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDt12PWsJAK3ThJVnjgV0S203FZ0qJ1iPw"></script>
+    <script src="gmap.js"></script>
+    <script src='googlemap.js'></script>
+   
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="adresse" />
+<input type="text" id="latitude">
+<input type="text" id="longt">
+<div id="map"></div> 
+ <script type="text/javascript" charset="utf-8">
+        $(function(){
+           $("#map").googleMap({
+                  key:'AIzaSyDt12PWsJAK3ThJVnjgV0S203FZ0qJ1iPw',
+                  show:'map',
+                  latitude:'51.508742',
+                  longtitude:'-0.120850',
+                  selectLat:'latitude',
+                  selectLongt:'longt',
+                  selectAdress:'#adresse',
+           }); 
+        });
+    </script>   
+</body>
+</html>
